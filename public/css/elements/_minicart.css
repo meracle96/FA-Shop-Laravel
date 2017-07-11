@@ -1,0 +1,9 @@
+.mini-cart {
+  position: relative;
+}
+
+.mini-cart-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}

@@ -1,0 +1,583 @@
+
+.effect-bn(){
+	display: inline-block; overflow: hidden; position: relative;
+	img{ .transition(); }
+	&:hover{
+		img{ .scale(1.2);  z-index: 1; }
+		&:before{ .opacity(100); }
+	}
+	&:before{ content: ""; width: 100%; height: 100%; z-index: 2;
+		.rgbaColorIn(@activeColor,70%); .opacity(0);
+		background: @result; position: absolute; top: 0; left: 0;										
+	}
+}
+.box_header_03{	position: absolute; top: 108px; left: -335px; z-index: 9; 
+	.navbar{ min-height: 0; margin-bottom: 0; .border-radius(0); border: none; 
+		float: right; width: 395px; height: 310px; background: rgba(255, 255, 255, 0.1); 
+		.box-right{ float: left; width: 170px; margin-left: 20px; position: relative;
+			> h2{
+				text-transform: uppercase; color: #fff; margin: 0; padding: 12px 10px 12px 0; text-align: right;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2); font-size: 100%;
+			}
+			&:before{
+				content: ""; width: 170px; height: 483px; background: url('@{base-url}girl.png') no-repeat 0 0;
+				position: absolute; top: -137px; right: -190px;
+			}
+		}	
+	}
+	.explodedmenu{ float: left; width: 100%; 		 
+		
+		>li{ float: left; width: 100%; 	 padding: 0 10px; }
+		
+		li{ 
+			&.item{ float: left; position: static;				
+				> a{ 					
+					color: #fff; float: left; width: 100%; padding: 5px 0; text-align: right;
+					&:hover{
+						color: @activeColor;
+					}			
+				}
+				
+				&.act{
+					> a{ color: @activeColor; 	}					
+				}
+				&.parentMenu{
+					> a{
+						position: relative;						
+						&:before{ 
+							content: "\f104"; font-family: "FontAwesome"; position: absolute; top: 5px; 
+							left: 0; color: #fff; 
+						}
+						&:after{ 
+							content: ""; font-family: "FontAwesome"; position: absolute; top: 0px; 
+							left: -50px;  width: 50px; height: 30px; background: #f00; float: left; .opacity(0);
+						}
+						&:hover{
+							&:before{ color: @activeColor; }
+						}
+					}					
+					.block-menu-01{ 
+						.item{  float: left; width: 200px; margin-right: 1px; background: rgba(255, 255, 255, 0.1);
+							&.last{ border: none; }
+							h2{ padding: 0 15px; position: relative; float: left; width: 100%; margin: 0; font-size: 100%;
+								&.i0{
+									&:before{ content: ""; position: absolute; top: 11px; left: 15px; 
+										background: url('@{base-url}canifa.png') no-repeat 0 0;
+										width: 20px; height: 20px;
+									}
+								}
+								&.i1{
+									&:before{ content: ""; position: absolute; top: 11px; left: 15px; 
+										background: url('@{base-url}canifa.png') no-repeat -39px 0;
+										width: 20px; height: 20px;
+									}
+								}
+								&.i2{
+									&:before{ content: ""; position: absolute; top: 10px; left: 15px; 
+										background: url('@{base-url}canifa.png') no-repeat -82px 0;
+										width: 20px; height: 20px;
+									}
+								}
+								&.i3{
+									&:before{ content: ""; position: absolute; top: 12px; left: 15px; 
+										background: url('@{base-url}canifa.png') no-repeat -127px 0;
+										width: 20px; height: 20px;
+									}
+								}
+								a{
+									&:hover{ span{color: @activeColor;} }
+								}
+								span{
+									float: left; width: 100%; padding: 12px 0 12px 28px; text-transform: uppercase; color: @text9;
+									border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+								}
+							}
+							ul{
+								li{ float: left; width: 100%; padding: 0 15px; 
+									&.first{ background: none !important;
+										padding-top: 10px; padding-bottom: 10px;
+										a{ float: left; width: 100%; overflow: hidden; padding: 0; position: relative;
+											&:before{
+												content: ""; position: absolute; width: 100%; height: 100%;
+												top: 0; left:  0;
+												.rgbaColorIn(@activeColor,20%);
+												background: @result;
+												z-index: 9; .opacity(0); .transition();
+											}
+											img{ width: 100%; .transition(); .scale(1); .opacity(100); }
+											&:hover{
+												&:before{ .opacity(100); .transition();}
+												img{
+													.scale(1.2);
+													.opacity(80);
+													.transition();
+												}
+											}
+										}
+									}
+									&.last{
+										border-top: 1px solid rgba(255, 255, 255, 0.2);
+										margin-top: 5px; margin-bottom: 20px;
+										padding: 0;
+										a{ float: left; width: 100%; margin-top: 4px; padding:4px 0 6px 15px;
+											&:hover{ background: @activeColor; }
+										}
+										&:hover{
+											background: none;
+										}
+									}
+									a{
+										float: left; width: 100%; padding: 4px 0 6px; color: @text9;
+										text-transform: capitalize; 
+									}
+									&:hover{
+										background: @activeColor; cursor: pointer; .transition(all 0.2s ease-out 0s);
+										a{
+											color: #fff;
+										}
+									}
+								}
+							}
+						}
+					}
+					.block-menu-02{
+						.item{  float: left; width: 401px; height: 310px; margin-right: 1px; 
+							background: rgba(255, 255, 255, 0.1); 
+							padding: 0 30px 30px 30px;
+							h2{
+								margin: 30px 0 20px; line-height: 100%;
+								text-transform: uppercase;
+								color: #fff; font-size: 100%;
+							}
+							ul{ float: left; width: 100%;
+								li{ float: left; margin: 0 1px 1px 0;
+									a{
+										.effect(); overflow: hidden; float: left; width: 84px; height: 105px;
+										img{ width: 100%; .transition(); .scale(1); .opacity(100); }
+										&:hover{											
+											img{
+												.scale(1.1);
+												.opacity(80);
+												.transition();
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					.explodedmenu-menu-popup{
+						.exploded-cms-block{
+							position: absolute; top: 0px; right: 500px; z-index: 999; .opacity(0); visibility: hidden; .transition();
+							width: 804px; height: 310px; 
+						}
+						.exploded-menu-block{ background: rgba(255, 255, 255, 0.1); position: absolute; top: 0px; 
+							right: 220px; z-index: 999; .opacity(0); visibility: hidden; .transition();
+							ul{ .shadow(); min-width: 180px; padding: 15px 10px;
+								li{  position: relative; 
+									a{	text-align: right;
+										padding: 5px 10px 5px 5px; display: block; position: relative; color: #fff;
+										&:before{ content: "\f104"; position: absolute; left: 10px; top: 5px; 
+										 font-family: "FontAwesome";
+										}
+										&:hover{ background: @activeColor; }
+									}
+									ul{
+										position: absolute; top: 0; right: 230px; background: rgba(255, 255, 255, 0.1);
+										.opacity(0); visibility: hidden; .transition(); z-index: 999;
+									}
+									&:hover{
+										> ul{
+											.opacity(100); visibility: visible; right: 171px;
+											.transition();
+											&:after{ 
+												content: ""; position: absolute; top: 0px; 
+												right: -50px;  width: 50px; height: 30px; background: #f00; float: left; .opacity(0);
+											}
+										}
+									}
+								}
+							}							
+						}		
+					}
+					&:hover,&.actived-default{
+						.explodedmenu-menu-popup{ 
+							.exploded-cms-block{
+								right: 190px; .opacity(100); visibility: visible; .transition();
+							}
+						}	
+						.exploded-menu-block{
+							right: 191px; .opacity(100); visibility: visible; .transition();
+
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+/*==========================================menu home2=========================================*/
+.header-container02,.header-container03,.header-container05,.header-container07,.header-container08{ 
+	.header .header-nav > .box-right{ margin-top: 0; float: left; width: 100%; }
+	.navbar{ min-height: 0; margin-bottom: 0; .border-radius(0); border: none; 
+	 float: left; width: 100%; margin-top: 24px;
+		.header-nav > .box-right > h2{ display: none;}
+		.explodedmenu{ float: right; position: relative;
+			li{
+				&.item{float: left; position: static; margin: 0 5px;					
+					> a{ 
+						float: left; padding: 5px 16px; position: relative;
+						&:before{ content: ""; width: 0; height: 1px; background: #fff; 
+						position: absolute; top: 0; left: 0; .transition();
+						}
+						&:after{ content: ""; width: 0; height: 1px; background: #fff; 
+						position: absolute; bottom: 0; right: 0; .transition();
+						}
+						
+						span{ color: #fff; }								
+					}
+					
+					&.act{
+						> a{ color: #fff;
+						}					
+					}		
+					&:hover{
+						> a{
+							&:before,&:after{ width: 100%; .transition();}
+							span{
+								&:after{ .opacity(100); bottom: -23px; .transition(); }
+							}
+						}
+					}		
+					&.menumain{ position: relative; }
+					
+					&.parentMenu{
+						> a > span{	position: relative;
+							&:after{ content: "\f0d8"; width: 100%; height: 20px; position: absolute; 
+							bottom: -40px; text-align: center;
+							left: 0; margin-left: -5px; color: #fff; font-size: 21px;
+							font-family: "FontAwesome"; text-indent: 0; .opacity(100); .transition(); 
+							}
+						}
+						&:hover{
+							> a{								
+								span{
+									&:after{ .opacity(100); bottom: -23px; .transition(); }
+								}
+							}
+						}
+						&.menu03{
+							.explodedmenu-menu-popup{ left: -120px; }
+						}
+						.block-menu-01{ .box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2));background: #fff; float: left; width: 830px; 
+							height: 336px; padding-left: 15px;
+							.item{  float: left; width: 200px; 
+								&.last{ border: none; }
+								h2{ padding: 0 15px; position: relative; float: left; width: 100%; margin: 18px 0 0; font-size: 100%;
+									&.i0{
+										&:before{ content: ""; position: absolute; top: 11px; left: 15px; 
+											background: url('@{base-url}canifa.png') no-repeat 0 0;
+											width: 20px; height: 20px;
+										}
+									}
+									&.i1{
+										&:before{ content: ""; position: absolute; top: 11px; left: 15px; 
+											background: url('@{base-url}canifa.png') no-repeat -39px 0;
+											width: 20px; height: 20px;
+										}
+									}
+									&.i2{
+										&:before{ content: ""; position: absolute; top: 10px; left: 15px; 
+											background: url('@{base-url}canifa.png') no-repeat -82px 0;
+											width: 20px; height: 20px;
+										}
+									}
+									&.i3{
+										&:before{ content: ""; position: absolute; top: 12px; left: 15px; 
+											background: url('@{base-url}canifa.png') no-repeat -127px 0;
+											width: 20px; height: 20px;
+										}
+									}
+									a{
+										&:hover{ span{color: @activeColor;} }
+									}
+									span{
+										float: left; width: 100%; padding: 12px 0 12px 28px; text-transform: uppercase; color: @text9;
+										border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+									}
+								}
+								.inner{ float: left; width: 100%; }
+								ul{
+									li{ float: left; width: 100%; padding: 0 15px; 
+										&.first{ background: none !important;
+											padding-top: 10px; padding-bottom: 10px;
+											a{ float: left; width: 100%; overflow: hidden; padding: 0; position: relative;
+												&:before{
+													content: ""; position: absolute; width: 100%; height: 100%;
+													top: 0; left:  0;
+													.rgbaColorIn(@activeColor,20%);
+													background: @result;
+													z-index: 9; .opacity(0); .transition();
+												}
+												img{ width: 100%; .transition(); .scale(1); .opacity(100); }
+												&:hover{
+													&:before{ .opacity(100); .transition();}
+													img{
+														.scale(1.2);
+														.opacity(80);
+														.transition();
+													}
+												}
+											}
+										}
+										&.last{											
+											margin-top: 5px; margin-bottom: 20px;
+											padding: 0;
+											a{ float: left; width: 100%; margin-top: 4px; padding:4px 15px 6px 15px;
+												span{ position: relative; float: left; width: 100%; 
+													&:before{ content: ""; float: left; width: 100%; height: 1px; position: absolute;
+													top: -9px; left:  0; background: rgba(204, 204, 204, 0.2);
+													}													 
+												}
+												&:hover{ background: @activeColor; }
+											}
+											&:hover{
+												background: none;
+											}
+										}
+										a{
+											float: left; width: 100%; padding: 4px 0 6px; color: @text9;
+											text-transform: capitalize; 
+										}
+										&:hover{
+											background: @activeColor; cursor: pointer; .transition(all 0.2s ease-out 0s);
+											a{
+												color: #fff;
+											}
+										}
+									}
+								}
+							}
+						}
+						.block-menu-02{.box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2)); background: #fff;  float: left; 
+							width: 770px; height: 310px; padding-left: 15px;
+							.item{  float: left; width: 370px; height: 310px; 
+								background: rgba(255, 255, 255, 0.1); 
+								padding: 0 15px 30px 15px;
+								h2{
+									margin: 30px 0 20px; line-height: 100%;
+									text-transform: uppercase;
+									font-size: 100%;
+								}
+								ul{ float: left; width: 100%;
+									li{ float: left; margin: 0 1px 1px 0;
+										a{
+											.effect(); overflow: hidden; float: left; width: 84px; height: 105px;
+											img{ width: 100%; .transition(); .scale(1); .opacity(100); }
+											&:hover{											
+												img{
+													.scale(1.1);
+													.opacity(80);
+													.transition();
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						.block-menu-03{ padding-top: 40px;
+							.box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2));background: #fff; float: left; width: 995px; height: 350px;
+							.box{ float: left; }
+							.box1{
+								float: left; width: 450px; height: auto; border: 1px solid @borderColor; .transition();
+								margin: 0 30px 0 30px; position: relative; 
+								> a{ float: left; width: 100%; 
+									img{ float: left; width: 100%; }									
+								}
+								&:hover{ border-color: @activeColor; .transition(); }
+								.info{ float: left; width: 200px;
+									position: absolute; top: 78px; left: 56px;
+									.p1{ .size2(); text-transform: capitalize; float: left; margin: 0 0 8px 0; }
+									.p2{ font-size: 342.85%; float: left; }
+									.item-link{ height: 12px; width: 170px; float: left; text-indent: -9999em;
+										background: url('@{base-url}canifa.png') no-repeat -43px -44px; .transition();
+										&:hover{
+											margin-left: 10px; .transition();
+										}
+									}
+								}
+							}
+							.box2{
+								width: 195px; margin: 0 30px 0 30px;
+								h2{ margin: -5px 0 15px; color: @text3; .size4(); }
+								ul{ float: left; width: 100%;
+									li{ float: left; width: 100%;										
+										a{ float: left; width: 100%; position: relative;
+											padding: 10px 0 10px 27px;
+											border-top: 1px solid @borderColor;
+											text-transform: capitalize; color: @text6; 
+											&:before{ content: "\f0da"; position: absolute; top: 10px; left: 5px;
+											font-family: "FontAwesome"; 
+											}
+											&:hover{
+												color: @activeColor;
+											}
+										}
+									}
+								}
+							}
+							.box3{ width: 170px; margin-left: 30px;
+								h2{ margin: -5px 0 15px; color: @text3; .size4(); }
+								ul{ float: left; width: 100%;
+									li{ float: left; width: 100%; margin-top: 10px; min-height: 72px;
+										&:first-child{ margin-top: 0; }
+										a{ float: left; width: 100%; position: relative;
+											border: 1px solid @borderColor; .transition();
+											img{ width: 100%; }
+											&:hover{ border-color: @activeColor; .transition(); }
+										}
+									}
+								}		
+							}
+						}
+						.explodedmenu-menu-popup{
+							position: absolute; top: 65px; left: 0; z-index: 991; .opacity(0); visibility: hidden; .transition();
+							.inner-cms-block{
+								.shadow(); background: #fff; .border-radius(5px); padding: 25px 15px; 
+							}
+							.exploded-menu-block{ background: #fff;
+								ul{ .shadow(); min-width: 200px; padding: 15px 10px;
+									li{  position: relative; background: @bgf9;
+										a{
+											padding: 5px 0 5px 32px; display: block; position: relative; color: @text6;
+											&:before{ content: "\f105"; position: absolute; left: 20px; top: 5px; 
+											 font-family: "FontAwesome";
+											}
+											&:hover{ background: @activeColor; 
+												color: #fff;
+												&:before{ 
+													content: "\f105"; position: absolute; left: 20px; top: 5px; 
+											 		font-family: "FontAwesome";
+												}
+											}
+										}
+										ul{
+											position: absolute; top: 0; left: 230px; background: #fff;
+											.opacity(0); visibility: hidden; .transition(); z-index: 9;
+										}
+										&:hover{
+											> ul{
+												.opacity(100); visibility: visible; left: 180px;
+												.transition();
+											}
+										}
+									}
+								}							
+							}						
+						}
+						&:hover{
+							.explodedmenu-menu-popup{ top: 45px; .opacity(100); visibility: visible; .transition();}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+.header-container02 .navbar .explodedmenu li.item{ margin: 0 15px; }
+.header-container02 .navbar .explodedmenu li.item > a{
+	padding: 5px 10px;
+}
+.header-container03,.header-container05,.header-container07,.header-container08{
+	.navbar{
+		margin-top: 0;
+		.explodedmenu{
+			li{
+				&.item{
+					> a{
+						padding: 30px 16px;
+						&:before,&:after{ display: none; }
+					}
+					&:hover,&.act{
+						> a{ background: rgba(0, 0, 0, 0.2); 
+							&:before,&:after{ .opacity(100) !important; }
+						}
+					}
+				} 
+				&.parentMenu{
+					> a{ 	
+						&:before,&:after{ display: block; .opacity(0); }					
+						&:before{ content: "\f0d8"; font-family: "FontAwesome"; width: 10px; margin-left: -4px; height: 10px; background: none;
+						position: absolute; bottom: 5px; top: auto; left: 50%; .transition(); color: @activeColor; font-size: 15px;
+						}
+						&:after{ content: ""; width: 100%; height: 2px; background: @activeColor; 
+						position: absolute; bottom: 0; right: 0; .transition();
+						}	
+						>span{
+							&:after{ display: none; }
+						}					
+					}
+					.explodedmenu-menu-popup{ top: 100px !important; }
+					&:hover{
+						.explodedmenu-menu-popup{ top: 80px !important; }
+					}
+				}
+			}
+		}
+	}
+}
+.header-container07,.header-container08{
+	.header{ background: #fff;
+		.navbar{
+			.explodedmenu{
+				li{
+					&.item {
+						> a {
+							span{
+								color: @text3;
+							}							
+						}	
+					}
+					&.home7-icon-new,&.home7-icon-sale{
+						> a{ 
+							img{
+								position: absolute; top: 15px; left: 50%; margin-left: -17px;
+							}
+						}
+					}
+					&:hover{
+						> a {
+							span{
+								color: #fff;
+							}							
+						}	
+					}
+				}
+			}
+		}
+		.box-right {
+			.box.box-account-lc{
+				.style-icon{
+					&:before{
+						background: url('@{base-url}canifa.png') no-repeat -106px -141px;
+					}					
+				}
+			}
+			.box.box-search {
+				.style-icon{
+					&:before{ background: url('@{base-url}canifa.png') no-repeat -140px -141px; }
+				}
+			}	
+			.box.block-cart {
+				.style-icon{
+					.total-item{
+						background: #000; color: #fff;
+					}
+					&:before{ background: url('@{base-url}canifa.png') no-repeat -173px -141px; }
+				}
+			}	
+		}
+	}
+}

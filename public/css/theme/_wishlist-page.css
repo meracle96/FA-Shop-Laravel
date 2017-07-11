@@ -1,0 +1,19 @@
+.page-title.no-bg {
+  min-height: 0;
+  text-align: center;
+}
+
+.page-title.no-bg > .container {
+  position: static;
+  transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  -o-transform: none;
+}
+
+.page-title.no-bg .title {
+  font-size: 24px;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,155 @@
+.category-products.pro-list .toolbar-bottom{ margin-top: 20px; margin-bottom: 30px;}
+.category-products.pro-list .toolbar-top{ margin-bottom: 10px; }
+.products-list{	float: left; width: 100%; 
+	.toolbar {
+		.box-bottom{
+			margin-bottom: 30px;
+		}	
+	} 
+	.item{ float: left; width: 100%; position: relative; border: 1px solid transparent; margin-top: 10px;	padding: 0 10px;
+		&:hover{ 
+			 border: 1px solid @borderColor;
+		}					
+		.inner{ float: left; width: 100%; padding: 10px 0; 
+			.item-image{ float: left; width: 180px; padding: 0;
+				.item-image-inner{ float: left; width: 100%; position: relative;
+					&:hover{
+						.item-btn{
+							.opacity(100); .transition();
+							.btn-wqc{ margin-top: 67%; .transition(all 0.5s ease-out 0s);}
+						}
+					}
+					.product-image{
+						float: left; width: 100%;
+						img{
+							width: 100%;
+						}
+					}
+					.item-btn{ position: absolute; top: 0; left: 0; background: rgba(0, 0, 0, 0.5);
+						float: left; width: 100%; height: 100%; .opacity(0); .transition();								
+						.btn-wqc{ float: left; width: 100%; text-align: center; margin-top: 50%;  
+							.transition(all 0.5s ease-out 0s);
+							a{ display: inline-block; margin-bottom: -4px; text-indent: -9999em;
+								width: 35px; height: 35px; position: relative; .transition();
+								&:before{
+									content: ""; float: left; width: 20px; height: 20px;
+									position: absolute; top: 7px; left: 8px;
+									font-family: "FontAwesome"; color: #fff; text-indent: 0;
+								}
+								&:hover{ background: @activeColor; .transition(); }
+								&.link-wishlist{
+									&:before{
+										content: "\f004"; top: 8px;
+									}
+								}
+								&.vt_quickview_handler{
+									span{ display: none; }
+									&:before{
+										content: "\f002"; top: 8px;
+									}
+								}
+								&.link-compare{
+									&:before{
+										content: "\f14c";
+									}
+								}
+							}
+						}
+						
+					}
+				}
+			}/*=====================================.item-image========================================*/
+			.product-info{ float: left; width: 375px; padding: 0; margin-left: 20px; position: relative;
+				.product-name{ float: left; width: 100%; margin-top: 0;
+					a{	float: left; width: 156px; line-height: 100%; white-space: nowrap; overflow: hidden;
+						text-overflow: ellipsis; text-transform: capitalize; font-weight: bold;
+						height: 22px; .transition();
+						&:hover{							 
+							.transition();
+						}
+					}
+				}
+				.cate-name{ float: left; width: 100%; margin-bottom: 10px;
+					a{ float: left; line-height: 100%; color: @text9; .size1(); 
+						&:hover{
+							color: @activeColor;
+						}
+					}
+				}
+				
+				.wrap-ns-price{ float: left; width: 100%; margin-top: 15px; margin-bottom: 20px;
+					.price-box{ display: inline-block; margin-bottom: -4px;
+						.price{ font-weight: bold; }
+					}
+					.wrap-new-sale{ display: inline-block; margin:5px 0 -2px 10px; position: relative; top: 0px; }
+				}
+				
+				
+				> .rating{ float: left; width: 100%; 
+					margin-bottom: 0; 
+					.ratings{
+						float: left; 
+					}
+					.rating-links{ margin-bottom: 0;
+						a{ color: @text9; .size1(); }
+						.separator,.re-temp{ display: none; }
+					}
+				}
+				.desc{ float: left; width: 100%; max-height: 70px; overflow: hidden; padding-top: 18px; 
+					.size1(); border-top: 1px solid @borderColor;
+				}
+
+				> .button{ float: left; padding: 0; margin: 30px 0 0 0;text-transform: capitalize; 
+					background: none; color: @activeColor;  position: relative;
+					&:before{ content: ""; position: absolute; right: -29px; top: 0px; 
+						width: 20px; height: 20px; .border-radius(50%); border: 1px solid @activeColor;
+					}
+					&:after{ content: "\f105"; font-family: "FontAwesome"; position: absolute; right: -30px; top: 0px; 
+						width: 20px; height: 20px; color: @activeColor; text-align: center; 
+					}
+					&:hover{
+						color: @text3;
+						&:after{ color: @text3; }
+						&:before{ border-color: @text3; }
+					}
+				}
+				.box-qty-btncart{ float: left; width: 160px; position: absolute; top: 20px; right: 0;
+
+					.flycart_qty_edit{ float: left; width: 100%; position: absolute; top: 0; left: 0;	 display: block;					
+						input{ float: left; width: 90px !important; height: 30px; border: 1px solid #ccc; text-align: center; color: @text6;border-left: none;border-right: none; }
+						.flycart-qty-btn{ float: left; position: relative; width: 35px; height: 30px; 
+							border: 1px solid #ccc; text-indent: -9999em; margin-top: 0;
+							&:before{
+								content: "";background: url('@{base-url}minus.png') no-repeat 0 0;width: 13px; height: 1px;position: absolute;top: 14px;left: 9px;
+							}
+							&.right{
+								&:before{
+									background: url('@{base-url}plus.png') no-repeat 0 0;width: 13px;height: 13px;top: 8px;left: 10px;.transition();
+								}
+								&:hover{
+
+									&:before{
+										background: url('@{base-url}hover-plus.png') no-repeat 0 0;width: 13px;height: 13px;top: 8px;left: 10px;.transition();
+									}
+								}
+							}
+							&.left{
+								&:hover{
+									&:before{
+										background: url('@{base-url}hover-minus.png') no-repeat 0 0;width: 13px; height: 5px;top: 12px;left: 9px;
+									}
+								}
+							}
+						}
+						margin-left: 0 !important; margin-right: 0 !important;
+					}
+					.btn-cart,.btn-update,.btn-pro-config{  margin-top: 40px;
+						.ca-button(); float: left; line-height: 40px;
+						width: 100%; margin-bottom: 0;
+						&:hover{ cursor: pointer; }
+					}
+				}
+			}/*=====================================.product-info========================================*/
+		}
+	}/*=====================================.item========================================*/
+}

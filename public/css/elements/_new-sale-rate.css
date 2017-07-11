@@ -1,0 +1,61 @@
+.new-sale-rate .title {
+  background: transparent url("../images/new-line.png") repeat-x scroll 0% 27%;
+}
+
+.new-sale-rate .title .h3-title {
+  font-size: 24px;
+  background: #fff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+.new-sale-rate .title .h3-title:after {
+  content: '';
+  display: inline-block;
+  border-bottom: 1px solid;
+}
+
+.new-sale-rate .product-item {
+  margin-bottom: 30px;
+}
+
+.new-sale-rate .product-item .rarings {
+  margin: 5px 0 4px;
+}
+
+.new-sale-rate .product-item .product-name {
+  font-size: 20px;
+}
+
+.new-sale-rate .product-item .product-img {
+  width: 30%;
+  float: left;
+  margin-right: 3%;
+  border-bottom: 0;
+}
+
+.new-sale-rate .product-item .product-info {
+  width: 67%;
+  float: right;
+  text-align: left;
+}
+
+.new-sale-rate .product-item .product-info .btn-buynow {
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+.new-sale-rate .product-item .product-info .btn-buynow button.button {
+  background: #fff;
+  border: 1px solid;
+  width: 110px;
+  height: 35px;
+  border-radius: 20px;
+}
+
+.new-sale-rate .product-item .product-info .btn-buynow button.button span {
+  font-size: 13px;
+  font-weight: bold;
+}

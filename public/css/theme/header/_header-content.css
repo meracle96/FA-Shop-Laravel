@@ -1,0 +1,62 @@
+/*-----------------------------------------------------------------------------
+-	Header content Stylesheet  -
+version:   	1.0.0
+date:      	23/10/15
+author:		EngoCreative
+email:     	info@engocreative.com
+website:   	http://www.engocreative.com
+-----------------------------------------------------------------------------*/
+.header-home4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header-home4 .header-main {
+  margin: 0 0 30px 0;
+  height: 64px;
+}
+
+.header-home4 .header-main .container .container1 {
+  border-top: 1px solid #BCBCBC;
+  border-bottom: 1px solid #BCBCBC;
+  height: 66px;
+}
+
+.header-home4 .logo {
+  position: absolute;
+  left: 27px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.header-home4 .mainmenu {
+  display: inline-block;
+}
+
+.header-home4 .right-header {
+  position: absolute;
+  right: 27px;
+  top: 0;
+  display: inline-block;
+}
+
+.header-home4 .right-header .settings {
+  float: right;
+}
+
+.header-home4 .right-header .settings .btn-settings {
+  margin: 20px 25px;
+  cursor: pointer;
+}
+
+.header-home4 .right-header .settings .toplinks {
+  display: none;
+}
+
+.header-home4 .right-header .mini-cart {
+  float: right;
+  cursor: pointer;
+}

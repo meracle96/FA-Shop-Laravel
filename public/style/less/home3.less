@@ -1,0 +1,623 @@
+.header-container03{ float: left; width: 100%; 
+	.header{ float: left; width: 100%; background: rgba(0, 0, 0, 0.7); min-height: 80px; position: relative;
+		.header-inner{ margin: 0 -30px; }
+		.logo{ margin-top: 18px; float: left; }
+		.box-right{float: right; margin-top: 30px;
+			.box{ position: relative; float: left; width: 30px; height: 20px; margin: 0 10px;
+				.style-icon{ float: left; width: 100%; height: 100%; text-indent: -9999em; 
+					&:before{ content: ""; width: 30px; height: 30px; 
+					position: absolute; top: 0; left: 0;
+					}
+					&:after{ content: "\f0d8"; width: 14px; height: 10px; position: absolute; 
+					bottom: -30px;
+					left: 50%; margin-left: -5px; color: #fff; font-size: 21px;
+					font-family: "FontAwesome"; text-indent: 0; .opacity(0);   .transition(); 
+					}
+					&:hover{ cursor: pointer; }
+				}
+				.box-inner{ position: absolute; top: 50px; right: 0; background:  #fff; float: left; 
+					.box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2)); 
+					.opacity(0); visibility: hidden; z-index: 99; .transition();
+				}
+				&:hover{
+					.style-icon{
+						&:after{ bottom: 1px; .opacity(100); .transition(); }
+					}
+					.box-inner{
+						top: 28px; .opacity(100); visibility: visible; .transition();						
+					}
+				}
+				&.box-account-lc{ 
+					.style-icon{
+						&:after{ margin-left: -14px; }
+					}
+					.box-inner{
+						width: 410px; height: 162px; padding: 24px 0 0 15px; right: -109px;
+						ul{ float: left; width: 100%; 
+							li{ float: left; width: 100%; 
+								a{ float: left; width: 100%; line-height: 30px; 
+									color: @text6;
+									&:hover{
+										color: @activeColor;
+									}
+								}
+							}
+						}
+						.links,.block-language{ border-right: 1px solid @borderColor;
+							float: left; width: 140px; height: 116px;
+							
+						}
+						.links{ 
+							li{	padding-left: 24px;			
+								a{ padding-left: 17px; position: relative;
+									&:before{ content: ""; position: absolute; top: 0; 
+									left: -8px; font-family: "FontAwesome"; color: @text6;
+									}
+									&.top-link-myaccount{
+										&:before{ content: "\f007"; }
+									}
+									&.top-link-wishlist{
+										&:before{ content: "\f08a"; }
+									}
+									&.top-link-checkout{
+										&:before{ content: "\f090"; }
+									}
+									&.top-link-login{
+										&:before{ content: "\f13e"; left: -6px; }
+									}
+									&:hover{ 
+										&:before{ color: @activeColor; }
+									}
+								}
+							}
+						}
+						.block-language{ padding: 0 18px 0 24px; width: 145px;
+							.lg-cur{ display: none; }
+							img{ margin: 10px 10px 0 0; }
+							.slimScrollBar{
+								width: 4px !important;
+								.opacity(20) !important;
+							}
+							ul{
+								li{
+									a{ width: auto; }
+								}
+							}
+							.selected{ color: @activeColor; }
+						}
+						.block-currency{ padding: 0 24px;
+							.item-cur{ display: none; }
+							float: left; width: 96px;  height: 162px;
+							.selected{ color: @activeColor; }
+						}
+					}	
+					.style-icon{
+						&:before{ background: url('@{base-url}canifa.png') no-repeat -342px 0; }
+					}
+				}
+				&.box-search{
+					.style-icon{
+						&:before{ background: url('@{base-url}canifa.png') no-repeat -375px 0;  }
+						&:after{ margin-left: -12px; display: none; }
+					}
+					.box-inner{ position: absolute; top: 28px; right: 0; background:  #fff; float: left; 
+						.box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2)); 
+						.opacity(100); visibility: visible; z-index: 99; .transition();
+					}
+					.advanced-search{ 
+						float: right; position: absolute; right: -20px;
+						.dropdown-cate,.form-search,.button{ float: right; }
+						.form-search{ position: relative; padding-left: 170px; 	
+							#search{ width: 350px; height: 40px; margin: 0; border:none;
+								color: @text9;  padding-left: 20px; padding-right: 90px; float: left;			
+							}				
+						}
+						.button{ color: #fff; position: absolute; right: 0;  z-index: 9991; 
+							padding: 10px 0; text-align: center;  .border-radius(0); 
+							min-width: 80px; background: @text6; margin: 0; 			
+							span{ 
+								color: #fff;
+								
+							}
+							&:before{ .transition();
+								content: ""; width: 100%; height: 100%;
+								position: absolute; top: 0; left: 0;
+								background: rgba(0, 0, 0, 0.1); .opacity(0);
+							}
+							&:hover{ background: @text3;
+								&:before{ .opacity(100); .transition(); }
+							}
+						}
+						.dropdown-cate{ position: absolute; z-index: 999; left: 0; margin-left: -1px;
+							padding: 0 0px 0px 20px; background: #fff; 				
+							.cat-search{ display: block; padding: 10px 0; color: @text9; 
+								position: relative;
+								width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+								&:before{ content: "\f107"; font-family: "FontAwesome"; position: absolute; top: 10px; 
+									font-size: 14px; right: 20px; color: @text9;
+								}
+								&:after{ content: ""; width: 1px; height: 20px; background: #ccc; position: absolute; top: 10px; right: 0;}
+								&:hover{
+							    	cursor: pointer;
+							    }
+							}
+						}
+						.search-lbl{ display: none;
+							float: left;  margin-right: 30px; line-height: 40px; color: #fff; position: absolute; top: 0; left: -75px;
+						}
+						.scrollbar {		
+							position: absolute;
+							width:200px;
+							background: #fff;
+						}
+						
+						li{
+							&:hover{ color: @activeColor !important; }
+						}
+						
+						.wrap-scrollbar{ 
+							position: absolute;
+							top: 40px; left: 0;
+							min-width: 200px;
+							background: #fff;				
+							padding: 15px;
+							display: none;
+							border-top: 1px solid #ccc;
+							border-left: 1px solid #ccc;
+							.box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2)); 
+							li{
+								&.level-3{ padding-left: 15px; color: #888; }
+								&.level-4{ padding-left: 30px; color: #aaa; }
+								&:hover{ cursor: pointer; }
+							}
+						}
+					}
+					/*======================================end .advanced-search===============================================*/
+				}
+				&.block-cart{
+					.style-icon{ text-indent: 0;						
+						&:before{ background: url('@{base-url}canifa.png') no-repeat 0 -38px; }
+						.total-item{
+							position: absolute; width: 17px; height: 17px; .border-radius(50%);
+							line-height: 17px; color: @activeColor; font-size: 10px; background: #000;
+							right: -7px; top: -12px; text-align: center;
+						}
+					}					
+					.block-title{  display: none; }
+					.block-content{ float: left; width: 300px;  margin: 0; right: -9px;
+						.inner{ background: #fff; float: left; width: 100%; padding: 15px 20px; 
+							.block-subtitle{
+								text-transform: uppercase; font-size: 100%;
+							} 
+							.truncated{ display: none; }
+							#cart-sidebar{
+								li{ float: left; width: 100%; padding: 15px 0 25px 25px; border-bottom: 1px solid @borderColor; position: relative;
+									.btn-remove{ position: absolute; top: 18px; font-size: 14px; left: 0; width: 15px; height: 15px; text-indent: -9999em;
+										&:before{ content: "\f014"; font-family: "FontAwesome"; position: absolute; top: 0; left: 0;
+										text-indent: 0;  color: @text6;
+										}
+										&:hover{ &:before{ color: @activeColor; } }
+									}
+									.btn-edit{	position: absolute; top: 42px; font-size: 14px; left: 0; width: 15px; height: 15px; text-indent: -9999em;
+										&:before{ content: "\f040"; font-family: "FontAwesome"; position: absolute; top: 0; left: 0;
+										text-indent: 0; color: @text6;
+										}
+										&:hover{ &:before{ color: @activeColor; } }
+									}
+									.product-image{ float: left; margin-right: 10px; overflow: hidden;
+										.effect();
+										img{ border: 1px solid transparent; }
+										&:hover{
+											img{  border: 1px solid @activeColor; .transition(all 0.3s ease-out 0s); }
+										}
+									}
+									.product-name{ font-size: 100%; 
+										a{ display: inline-block; width: 132px; overflow: hidden; color: @text6;
+										text-overflow: ellipsis; white-space: nowrap; text-transform: capitalize; 
+										&:hover{ color: @activeColor; }
+										}
+									}
+									.product-details{ float: left;
+										> strong{ float: left; min-width: 98px; border: 1px solid @borderColor;
+											a{ float: left; min-width: 19px; min-height: 28px; float: left; margin: 0; 
+												&.flycart-qty-change-left{
+													background: url('@{base-url}minus.png') no-repeat 0 0 #999;
+												}
+												&.flycart-qty-change-right{
+													background: url('@{base-url}plus.png') no-repeat 0 0 #999;
+												}
+												&:hover{
+													&.flycart-qty-change-left,
+													&.flycart-qty-change-right{
+														background-color: @activeColor;
+													}
+												}
+											}
+											input{ margin: 0; border: none; height: 28px; min-width: 58px;
+												border-right: 1px solid @borderColor;
+												border-left: 1px solid @borderColor;
+											}
+										}
+										.price{ color: @textff;
+											 line-height: 100%; width: 100%; margin: 0 0 12px; display: inline-block;
+										}
+									}
+								}
+							}
+							.summary{ float: left; width: 100%; margin-bottom: 8px;
+								p{ margin: 0; width: 100%; 
+									.label{ text-transform: uppercase; font-size: 100%; font-weight: normal;
+										padding: 0; margin: 15px 0 0; display: inline-block; color: @text6;
+									}
+									.price{ float: right; font-size: 142.85%; margin-top: 6px; color: @text6; }						}
+							}
+							.actions{ float: left; width: 100%; text-align: center;
+								.a-inner{ display: inline-block; 
+									a{ color: #fff; text-transform: uppercase; font-size: 100%; position: relative; 
+										padding: 10px 6px; float: left; width:125px; margin: 0 2px;  background: @activeColor;
+										&:hover{
+											&:before{
+												content: ""; width: 100%; height: 100%;
+												position: absolute; top: 0; left: 0;
+												background: rgba(0, 0, 0, 0.1);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				/*======================================end .block-cart===============================================*/
+				}
+			}
+		}
+	}
+
+}
+.block-best-seller{ float: left; width: 100%; margin-top: 70px;
+	.tab-item{ float: left; width: 100%; border-top: 1px solid @borderColor; padding: 20px 0 23px;
+		> h2{ .size6(); color: @text3;  text-transform: capitalize; float: left; margin: 0 0 0 0; 
+			float: left; width: 100%; line-height: 100%; text-align: center;font-family: "Sevillana" !important;
+		}
+		> ul{ float: left; width: 100%; text-align: center; margin: 6px 0 0 0; position: relative; z-index: 9;
+			li{ display: inline-block; 
+				a{ float: left; color: @text9; text-transform: capitalize; padding: 0 18px;
+					line-height: 30px; position: relative;
+					&:before{ content: ""; width: 15px; height: 20px; position: absolute; top: 6px; right: -10px;
+						background: url('@{base-url}canifa.png') no-repeat -173px -89px;
+					}
+					&.last{
+						&:before{ display: none; }
+					}
+					&:hover{ color: @text3; }
+				}
+				&.active{
+					a{
+						color: @text3;
+					}
+				}
+			}
+		}
+	}
+	.box-best-seller{
+		.tab-content{ float: left; overflow: hidden; }
+		.slider-inner{ margin: 0 -15px;
+			.container-slider{ position: relative; }			
+		}
+		.item{ padding: 0 15px;
+			.inner{ border: none;
+				.item-image{ border: 1px solid @borderColor; }
+				.product-info{ border: 1px solid transparent; 
+					padding: 18px 20px 68px;
+					.btn-cart{ padding: 0 30px; position: absolute; bottom: 48px; left: 0px;
+						background: none; .opacity(0); .transition();
+						span{ float: left; width: 100%; background: @activeColor; position: relative;
+							&:before{
+								background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+							    content: "";
+							    height: 100%;
+							    left: 0;
+							    opacity: 0;
+							    position: absolute;
+							    top: 0;
+							    .transition();
+							    width: 100%;
+							}
+						}
+					}
+				}
+				&:hover{
+					.product-info{						
+						border: 1px solid @borderColor;
+						border-top: 1px solid transparent;
+						.btn-cart,.btn-update,.btn-pro-config{ 
+							bottom: 21px; .opacity(100); .transition();
+							&:hover{
+								&:before{ display: none; }
+								span{
+									&:before{ .opacity(100); .transition(); }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.navslider{ position: absolute; float: left; width: 100%; top: -58px; right: 0;
+			.navslider_home2();
+			a{ position: relative; float: left; margin: 0; z-index: 10;
+				&.prev{ left: 15px; }
+				&.next{ float: right; right: 15px; }			
+			}
+		}
+	}
+}
+.box-banner-home3{ float: left; width: 100%; margin-top: -80px;
+	> a{ float: left; width: 100%;
+		img{ float: left; width: 100%; }
+	}
+}
+.block-newarrival-home3{ float: left; width: 100%; text-align: center; margin-top: -245px; position: relative; z-index: 99;
+	.content-newarrival{ display: inline-block; float: none; 
+		.title{ 
+			color: @text3;  text-transform: capitalize; 
+			float: left; margin: 0 0 25px 0; line-height: 100%; 
+			width: 100%; text-align: center; .size8();
+			font-family: "Sevillana" !important;
+		}
+		.inner{
+			float: left; width: 100%; padding: 10px; border: 1px solid @borderColor; position: relative;background: #fff;
+			.item{
+				float: left; width: 100%;
+				a{
+					float: left; width: 100%;
+					img{ width: 100%; }
+				}
+			}
+			&:before{ content: ""; width: 100%; height: 20px; position: absolute; bottom: -20px; left: 44px; 
+			background: url('@{base-url}bg-slide-home3.png') no-repeat 0 0;
+			}
+		}
+		.navslider{ position: absolute; float: left; width: 184px; top: auto;
+			bottom: -44px; left: 50%; margin-left: -92px;
+			.navslider_home2();
+			a{ position: relative; float: left; margin: 0; 					
+			}
+		}
+	}
+}
+.home3-box-banner{ float: left; width: 100%; margin-top: -20px;
+	.item{ padding: 0;
+
+		.pro-image{ float: left; width: 100%; 
+			img{ width: 100%; }
+		}
+		&:hover{
+			.info{
+				.link-sn{ color: #fff; border-color: #fff}
+			}
+		}
+		.info{ float: left; width: 320px; height: 100%; position: absolute; top: 0; left: 0; 
+		 background: @activeColor; color: #fff; 
+		 	.inner{ float: left; width: 100%; position: absolute; top: 32%; left: 0; text-align: center; }
+		 	p{ text-transform: uppercase; margin: 0; line-height: 100%; 
+		 		&.p1{ .size2(); margin-bottom: 8px; }
+		 		&.p2{ .size9(); margin-bottom: 5px }
+		 		&.p3{ .size9(); margin-bottom: 32px; }
+		 	}
+		 	.link-sn{
+		 		display: inline-block; height: 40px; width: 125px; border: 2px solid #000; line-height: 36px;
+		 		.size1(); color: @text3;
+		 		&:hover{
+		 			color: #fff;
+		 		} 		
+		 	}
+		 	&.box1{ width: 100%; height: 230px;  top: auto; bottom: 0; 
+		 		&:before{ content: ""; width: 42px; height: 2px; position: absolute; top: 0; right: 0;
+		 			background: #000;
+		 		}
+		 		&:after{
+		 			content: ""; width: 2px; height: 42px; position: absolute; top: 0; right: 0;
+		 			background: #000;
+		 		}
+		 		.p2{ margin-bottom: 32px; }
+		 		.inner{ top: 21%; }
+		 	}
+		 	&.box2{ left: -70px; 
+		 		&:before{ content: ""; width: 2px; height: 42px; position: absolute; bottom: 0; left: 0;
+		 			background: #000;
+		 		}
+		 		&:after{
+		 			content: ""; width: 42px; height: 2px; position: absolute; bottom: 0; left: 0;
+		 			background: #000;
+		 		}
+		 	}
+		 	&.box3{ left: auto; right: 0; 
+		 		&:before{ content: ""; width: 42px; height: 2px; position: absolute; top: 0; left: 0;
+		 			background: #000;
+		 		}
+		 		&:after{
+		 			content: ""; width: 2px; height: 42px; position: absolute; top: 0; left: 0;
+		 			background: #000;
+		 		}
+		 	}
+		}
+	}
+}
+.block-testimonials{  float: left; width: 100%; text-align: center; margin-top: 94px;
+	> .title{ float: left; width: 100%;
+		p{ float: left; width: 100%; margin: 0 0 0 0; line-height: 100%;
+			&.p1{ color: @text3; text-transform: capitalize; .size6(); margin-bottom: 8px; }
+			&.p2{ color: @text6; text-transform: capitalize; }
+		}
+	}
+	.block-images{
+		float: none; display: inline-block; padding: 0; margin: 50px 0 56px;
+		.item{ float: left; width: 100%; 
+			a{ float: left;
+				img{ width: 100%; .transition(); }
+				&:hover{
+					img{ .opacity(50); .transition(); }
+				}
+				&.actived{ 
+					img{ .opacity(50); .transition();}
+				}
+			}
+		} 
+	}
+	.block-info{
+		float: left; width: 100%;		
+		.inner{ display: inline-block; position: relative; 	
+			.title{ display: inline-block;  margin: 0 0 25px 0; position: relative;
+				.size2(); text-transform: uppercase; color: @activeColor;
+				&:before{ content: ""; width: 34px; height: 1px; background: #000; 
+				position: absolute; bottom: -16px; left: 34px; }
+			}	
+			> p{ clear: both; margin: 0 0 0 0; .size2(); color: @text9; position: relative;display: inline-block;
+				&:before{ content: ""; width: 17px; height: 10px; position: absolute; top: 1px; left: -23px; 
+					background: url('@{base-url}canifa.png') no-repeat -263px -88px;
+				}
+				&:after{ content: ""; width: 17px; height: 10px; position: absolute; bottom: 4px; right: 0; 
+					background: url('@{base-url}canifa.png') no-repeat -263px -107px;
+				}
+			}
+		}
+	}
+} 
+.wrap-new-letter{
+ 	margin-top: 67px;
+ 	margin-bottom: 70px;
+ 	float: left;
+ 	width: 100%;
+ 	text-align: center;
+ 	.new-letter{
+ 		width: 870px;
+ 		min-height: 196px;
+ 		display: inline-block; 
+ 		background: url('@{base-url}bg-new-letter.png') no-repeat 0 0;
+ 		padding: 5px;
+ 		.title{
+ 			float: left;
+ 			border-bottom: 1px solid @borderColor;
+ 			width: 100%;
+ 			.subtitle{
+ 				text-align: left;
+ 				float: left;
+ 				width: 50%;
+ 				a{
+ 					line-height: 50px;
+ 					font-size: 100%;
+ 					color: @text3;
+ 					text-transform: uppercase;
+ 					text-align: left;
+ 				}
+ 				&.subtitle-left{
+ 					text-align: left;
+ 					padding-left: 35px;
+ 				}
+ 				&.subtitle-right{
+ 					text-align: right;
+ 					padding-right: 30px;
+ 				}
+ 			} 
+ 		}
+ 		.content{
+ 			float: left;
+ 			width: 100%;
+ 			.content-left{
+ 				float: left;
+ 				width: 41.17%;
+ 				border-right: 1px solid @borderColor;
+ 				height: 100%;
+ 				display: block;
+ 				.block-left{
+ 					float: left;
+ 					.box{
+ 						width: 50px;
+ 						height: 50px;
+ 						background: @activeColor;
+ 						-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+   						 transform: rotate(136deg);
+   						 box-shadow:0 -5px 2px 0 rgba(0, 0, 0, 0.1);
+   						 margin-top: 45px;
+   						 float: left;
+   						 margin-left: 40px;
+   						 position: relative;
+   						 margin-bottom: 40px;
+   						 &:before{
+   						 	background:url("images/canifa.png") no-repeat scroll 0 -38px;
+							content: "";
+							display: block;
+							height: 17px;
+							left: 13px;
+							position: absolute;
+							top: 16px;
+							transform: rotate(-136deg);
+							width: 25px;
+   						 }
+ 					}
+ 				}
+ 				.block-right{
+ 					float: left;
+ 					text-align: left;
+ 					margin-left: 37px;
+ 					h2{
+ 					font-size: 100%;
+ 					font-weight: bold;
+ 					color: @activeColor;
+ 					margin-top: 28px;
+ 					margin-bottom: 5px;
+ 					}
+ 					ul{
+ 						li{
+ 							padding-left: 10px;
+ 							position: relative;
+ 							margin-bottom: 4px;
+ 							&:before{
+ 								content: "-";
+ 								position: absolute;
+ 								top: 0;
+ 								left: 0; 
+ 							}
+ 						}
+ 					}
+ 				}
+ 			}
+ 			.content-right{
+ 				float: left; 
+ 				padding-left: 50px;
+ 				width: 58%;
+ 				>span{
+ 					font-size: 100%;
+ 					float: left;
+ 					margin-top: 27px;
+ 				}
+ 				.input-box{
+ 					margin-top: 15px;
+ 					float: left;
+ 					input{
+ 						&.input-text{
+ 							min-width: 280px;
+ 							height: 36px;
+ 						}
+ 					}
+ 					button{
+ 						&.button{
+ 							text-transform: uppercase;
+ 							color: #fff;
+ 							background: @activeColor;
+ 							&:hover{
+ 								background:@bghover;
+ 							}
+ 						}
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+ }
+ .block-find-us{
+ 	.fanbox-content{
+ 		width: 255px;
+ 	}
+ }

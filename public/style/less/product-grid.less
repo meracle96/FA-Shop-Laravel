@@ -1,0 +1,250 @@
+.col-left{
+	padding: 0 30px 0 0;
+}
+.col-right{
+	padding: 0 0 0 30px;
+}
+.category-title{ display: none; }
+.inner-left,.inner-right{ float: left; width: 100%; }
+.wrap-block-tag{
+	float: left; width: 100%;  overflow: hidden;
+}
+.block-tag{ padding-right: 30px; position: relative; height: 54px; overflow: visible !important;
+	float: left; width: 100%;  margin: 0 0 10px 0; border: 1px solid @borderColor; 
+	label{
+		float: left; width: 86px; height: 54px; line-height: 54px; text-align: center; background:  @activeColor; color: #fff;	
+		.size1(); margin: -1px 10px 0 -1px; 
+	}
+	a{ float: left;  height: 54px;
+		span{ float: left;
+			.size1(); color: @text9; height: 34px; line-height: 32px; border: 1px solid transparent;
+			padding: 0 10px; margin-top: 10px;
+			&:hover{ border: 1px solid @activeColor; }
+		}
+	}
+	/*ul{ float: left;  height: 54px;
+		li{ float: left;  line-height: 54px;
+			a{ float: left;  .size1(); color: @text9; height: 34px; line-height: 32px; border: 1px solid transparent;
+				padding: 0 10px; margin-top: 10px;
+				&:hover{ border: 1px solid @activeColor; }
+			}
+		}
+	}*/
+	.open-item{
+		float: left; height: 20px; line-height: 20px; position: absolute; top: 17px; right: 10px;
+		padding: 0 10px; text-indent: -9999em; margin-left: 30px; 
+		&:hover{ cursor: pointer; 
+			&:before{ color: @activeColor; }
+		}
+		&:before{ content: "\f103"; font-family: "FontAwesome"; text-indent: 0; font-size: 12px;
+		 width: 10px; height: 10px; position:  absolute; top: 0; left: 0; color: @text9; }
+	}
+}
+.block-viewed{ display: none; }
+#catalog-listing,.category-products,.toolbar-top,.products-list{ float: left; width: 100%; }
+.block-banner-cate{ float: left; width: 100%; position: relative; margin-bottom: 25px;
+	a{
+		float: left; width: 100%;
+		img{ float: left; width: 100%; }
+	}
+	.block-banner-cate-inner{ position: absolute; left: 0; bottom: 22.8%; float: left; width: 100%;
+		h1{
+			.size5(); color: #000; float: left; width: 640px; height: 128px;font-family: "Sevillana" !important;
+			background: rgba(255, 255, 255, 0.6);
+			margin: 0; padding: 40px 0 0; line-height: 100%;  text-align: center;
+		}
+	}
+}
+
+.category-products,.block-pre-related{
+	.block-buyer-protec{
+		margin-bottom: 70px;
+	}
+	.products-grid{
+		.item{
+			.inner{
+				border-bottom: none; position: relative;
+				.wrap-btn-cart{ position: absolute; left: 0; bottom: -47px; .transition(); .opacity(0);
+					float: left; width: 100%;   z-index: 99;
+					border: 1px solid @borderColor; border-top: none; 
+					.inner-wrap-btn-cart{ float: left; margin-top: 28px; width: 100%; padding: 0 20px; background: #fff;
+						.btn-cart,.btn-update,.btn-pro-config{ 
+							display: inline-block;.ca-button(); line-height: 40px;
+							 width: 100%;  margin-bottom: -1px; margin-top: 10px;
+							 &:hover{ cursor: pointer; }
+						}
+						.flycart_qty_edit{ display: none; }
+					}
+				}
+				.product-info{
+					.product-name{ height: 18px; }
+					> .rating{ 								
+						.ratings{
+							float: left;
+						}
+					}
+					.rating-links{
+						float: left;
+					}
+				}
+				&:hover{
+					border-bottom: none;
+					&:before{ content: ""; width: 100%; height: 5px; background: #fff; position: absolute; bottom: -5px; left: 0;}
+					.box-shadow(0 -1px 4px rgba(204, 204, 204, 0.5));
+					.wrap-btn-cart{
+						width: 101.5%; left: -1px;
+						.box-shadow(0 2px 4px rgba(204, 204, 204, 0.5));
+					}
+				
+					.wrap-btn-cart{ margin-top: 10px;
+						bottom: -67px; .transition(); .opacity(100);
+					}
+				}
+			}
+		}
+	}
+}
+.subitem-image{
+	a{
+		img{
+			width: 100%;
+		}
+	}
+}
+.products-grid{ clear: both;
+	.item{ float: left; margin: 0 0 20px 0; padding: 0;
+		.inner{ float: left; width: 100%;   border: 1px solid transparent;
+			&:hover{
+				border: 1px solid @borderColor; .transition();
+				.item-image{
+					.item-image-inner{
+						.item-btn{
+							.opacity(100); .transition();
+							.btn-wqc{ margin-top: 67%; .transition(all 0.5s ease-out 0s);}
+						}
+					}
+				}
+				.product-info{ border-top: 1px solid @borderColor; .transition(); }
+			}
+			.item-image{ float: left; width: 100%; padding:10px; 
+				.item-image-inner{ float: left; width: 100%; position: relative;
+					.product-image{
+						float: left; width: 100%;
+						img{ width: 100%; min-height: 270px; }
+						.hidden{ min-height: 0; }
+					}
+					.item-btn{ position: absolute; top: 0; left: 0; background: rgba(0, 0, 0, 0.5);
+						float: left; width: 100%; height: 100%; .opacity(0); .transition();								
+						.btn-wqc{ float: left; width: 100%; text-align: center; margin-top: 50%;  
+							.transition(all 0.5s ease-out 0s);
+							a{ display: inline-block; margin:0 5px -4px 5px; text-indent: -9999em;
+								width: 35px; height: 35px; position: relative; .transition();
+								&:before{
+									content: ""; float: left; width: 20px; height: 20px;
+									position: absolute; top: 7px; left: 8px;
+									font-family: "FontAwesome"; color: #fff; text-indent: 0;
+								}
+								&:hover{ background: @activeColor; .transition(); }
+								&.link-wishlist{
+									&:before{
+										content: "\f004"; top: 8px;
+									}
+								}
+								&.vt_quickview_handler{
+									span{ display: none; }
+									&:before{
+										content: "\f002"; top: 8px;
+									}
+								}
+								&.link-compare{
+									&:before{
+										content: "\f14c";
+									}
+								}
+							}
+						}
+						
+					}
+				}
+			}
+			.product-info{ float: left; width: 100%; padding: 18px 20px 0 20px;
+				border-top: 1px solid transparent;
+				.configurable-swatch-list{ display: none; }				
+				.product-name{ float: left; width: 100%;
+					a{	float: left; width: 156px; line-height: 100%; white-space: nowrap; overflow: hidden;
+						text-overflow: ellipsis; text-transform: capitalize; font-weight: bold;
+						height: 23px; .transition();
+						&:hover{							
+							.transition();
+						}
+					}
+				}
+				.cate-name{ float: left; width: 100%; margin-bottom: 10px;
+					a{ float: left; line-height: 100%; color: @text9; .size1(); 
+						&:hover{
+							color: @activeColor;
+						}
+					}
+				}
+				> .rating{ float: left; width: 100%; margin-bottom: 15px;	height: 17px;									
+					.ratings{
+						float: left; 
+					}
+					.rating-links{ margin-bottom: 0;
+						a{ color: @text9; .size1(); }
+						.separator,.re-temp{ display: none; }
+					}
+				}
+				.wrap-ns-price{ float: left; width: 100%; height: 17px; margin: 0;
+					.price-box{ display: inline-block; margin: 0;
+						.price{ font-weight: bold; .size2(); }
+					}
+					.wrap-new-sale{ display: inline-block; margin:0 0 0 10px; position: relative; top: -1px; }
+				}
+				.btn-cart,.btn-update,.btn-pro-config{ 
+					display: inline-block;.ca-button();
+					 width: 100%; margin-top: 28px; margin-bottom: 0;
+					line-height: 40px;
+				}				
+			}
+			
+		}
+	}
+}
+.block-buyer-protec{
+	padding: 18px 20px 18px 90px; margin-top: 30px; background: #f9f9f9; border: 1px solid @borderColor;
+	.inner{ float: left; width: 100%; position: relative;
+		.icart{ float: left; width: 40px; height: 40px; background: @text6; 
+			position: absolute; top: 5px; left: -62px; .rotate(45deg); text-indent: -9999em;
+			&:before{ content: "\f07a"; font-family: "FontAwesome"; color: @activeColor; font-size: 18px;
+				position: absolute; top: 13px; left: 8px;  width: 10px; height: 10px; .rotate(-45deg); text-indent: 0;
+			}
+		}
+		h2{ float: left; margin: -2px 0 15px 0; .size2(); text-transform: capitalize; font-weight: bold; color: @activeColor; }
+		ul{ float: left; width: 100%;
+			li{
+				padding: 0 0 0 18px; position: relative;
+				&:before{ content: "\f046"; position: absolute; top: 0; left: 0; width: 15px; height: 15px; 
+					font-family: "FontAwesome"; color: @text6;
+				}
+				span{
+					color: @text9; .size1();
+					&.text-style{ color: @text6; }
+				}
+				&.last{
+					padding-left: 32px; 
+					&:before{ left: 14px; }
+				}
+				.link-more{ float: right; text-transform: capitalize; .size1(); color: @text9; position: relative; 
+					padding-right: 8px; margin-top: 20px; margin-right: 5px; margin-bottom: 2px;
+					&:before{ content: "\f0da"; font-family: "FontAwesome";  color: @text6; 
+					position: absolute; top: 0; right: 0px; 
+					}
+					&:hover{ color: @activeColor;
+						&:before{ color: @activeColor; }
+					}
+				}
+			}
+		}
+	}
+}

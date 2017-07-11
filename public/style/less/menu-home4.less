@@ -1,0 +1,275 @@
+.header-container04{ 
+	.header .header-nav > .box-right{ margin-top: 0; float: left; width: 100%; }
+	.navbar{ min-height: 0; margin-bottom: 0; .border-radius(0); border: none; 
+	 float: left; width: 100%; margin: 16px 0;
+		.header-nav > .box-right > h2{ display: none;  }
+		.explodedmenu{ float: left; position: relative; margin-left: -15px;
+			li{
+				&.item{ float: left; position: static; margin: 0 5px;					
+					> a{ border: 1px solid transparent; 
+						float: left; padding: 6px 15px; position: relative;		
+						span{ color: @text6; }								
+					}
+					&.home4-new{
+						> a{ 
+							&:before{ content: ""; width: 28px; margin-left: -14px; height: 20px; position: absolute; top: -4px; left: 50%; 
+							background: url('@{base-url}canifa.png') no-repeat -298px -116px;
+							}
+						}
+					}
+					&.home4-sale{
+						> a{ 
+							&:before{ content: ""; width: 28px; margin-left: -14px; height: 20px; position: absolute; top: -4px; left: 50%; 
+							background: url('@{base-url}canifa.png') no-repeat -336px -116px;
+							}
+						}
+					}
+					&.act{
+						> a{ 
+							border: 1px solid @activeColor; 
+						}					
+					}		
+					&:hover{						
+						> a{
+							border: 1px solid @activeColor; 
+							span{
+							
+							}
+						}
+					}		
+					&.menumain{ position: relative; }
+					
+					&.parentMenu{
+						> a > span{	position: relative;
+							
+						}
+						&:hover{
+							> a{								
+								span{
+									
+								}
+							}
+						}
+						&.menu03{
+							.explodedmenu-menu-popup{ left: -120px; }
+						}
+						.block-menu-01{ .box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2));background: #fff; float: left; width: 830px; 
+							height: 336px; padding-left: 15px;
+							.item{  float: left; width: 200px; 
+								&.last{ border: none; }
+								h2{ padding: 0 15px; position: relative; float: left; width: 100%; margin: 18px 0 0; font-size: 100%;
+									&.i0{
+										&:before{ content: ""; position: absolute; top: 11px; left: 15px; 
+											background: url('@{base-url}canifa.png') no-repeat 0 0;
+											width: 20px; height: 20px;
+										}
+									}
+									&.i1{
+										&:before{ content: ""; position: absolute; top: 11px; left: 15px; 
+											background: url('@{base-url}canifa.png') no-repeat -39px 0;
+											width: 20px; height: 20px;
+										}
+									}
+									&.i2{
+										&:before{ content: ""; position: absolute; top: 10px; left: 15px; 
+											background: url('@{base-url}canifa.png') no-repeat -82px 0;
+											width: 20px; height: 20px;
+										}
+									}
+									&.i3{
+										&:before{ content: ""; position: absolute; top: 12px; left: 15px; 
+											background: url('@{base-url}canifa.png') no-repeat -127px 0;
+											width: 20px; height: 20px;
+										}
+									}
+									a{
+										&:hover{ span{color: @activeColor;} }
+									}
+									span{
+										float: left; width: 100%; padding: 12px 0 12px 28px; text-transform: uppercase; color: @text9;
+										border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+									}
+								}
+								.inner{ float: left; width: 100%; }
+								ul{
+									li{ float: left; width: 100%; padding: 0 15px; 
+										&.first{ background: none !important;
+											padding-top: 10px; padding-bottom: 10px;
+											a{ float: left; width: 100%; overflow: hidden; padding: 0; position: relative;
+												&:before{
+													content: ""; position: absolute; width: 100%; height: 100%;
+													top: 0; left:  0;
+													.rgbaColorIn(@activeColor,20%);
+													background: @result;
+													z-index: 9; .opacity(0); .transition();
+												}
+												img{ width: 100%; .transition(); .scale(1); .opacity(100); }
+												&:hover{
+													&:before{ .opacity(100); .transition();}
+													img{
+														.scale(1.2);
+														.opacity(80);
+														.transition();
+													}
+												}
+											}
+										}
+										&.last{											
+											margin-top: 5px; margin-bottom: 20px;
+											padding: 0;
+											a{ float: left; width: 100%; margin-top: 4px; padding:4px 15px 6px 15px;
+												span{ position: relative; float: left; width: 100%; 
+													&:before{ content: ""; float: left; width: 100%; height: 1px; position: absolute;
+													top: -9px; left:  0; background: rgba(204, 204, 204, 0.2);
+													}													 
+												}
+												&:hover{ background: @activeColor; }
+											}
+											&:hover{
+												background: none;
+											}
+										}
+										a{
+											float: left; width: 100%; padding: 4px 0 6px; color: @text9;
+											text-transform: capitalize; 
+										}
+										&:hover{
+											background: @activeColor; cursor: pointer; .transition(all 0.2s ease-out 0s);
+											a{
+												color: #fff;
+											}
+										}
+									}
+								}
+							}
+						}
+						.block-menu-02{.box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2)); background: #fff;  float: left; 
+							width: 770px; height: 310px; padding-left: 15px;
+							.item{  float: left; width: 370px; height: 310px; 
+								background: rgba(255, 255, 255, 0.1); 
+								padding: 0 15px 30px 15px;
+								h2{
+									margin: 30px 0 20px; line-height: 100%;
+									text-transform: uppercase;
+									font-size: 100%;
+								}
+								ul{ float: left; width: 100%;
+									li{ float: left; margin: 0 1px 1px 0;
+										a{
+											.effect(); overflow: hidden; float: left; width: 84px; height: 105px;
+											img{ width: 100%; .transition(); .scale(1); .opacity(100); }
+											&:hover{											
+												img{
+													.scale(1.1);
+													.opacity(80);
+													.transition();
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						.block-menu-03{ padding-top: 40px;
+							.box-shadow(3px 3px 0px rgba(0, 0, 0, 0.2));background: #fff; float: left; width: 995px; height: 350px;
+							.box{ float: left; }
+							.box1{
+								float: left; width: 450px; height: auto; border: 1px solid @borderColor; .transition();
+								margin: 0 30px 0 30px; position: relative; 
+								> a{ float: left; width: 100%; 
+									img{ float: left; width: 100%; }									
+								}
+								&:hover{ border-color: @activeColor; .transition(); }
+								.info{ float: left; width: 200px;
+									position: absolute; top: 78px; left: 56px;
+									.p1{ .size2(); text-transform: capitalize; float: left; margin: 0 0 8px 0; }
+									.p2{ font-size: 342.85%; float: left; }
+									.item-link{ height: 12px; width: 170px; float: left; text-indent: -9999em;
+										background: url('@{base-url}canifa.png') no-repeat -43px -44px; .transition();
+										&:hover{
+											margin-left: 10px; .transition();
+										}
+									}
+								}
+							}
+							.box2{
+								width: 195px; margin: 0 30px 0 30px;
+								h2{ margin: -5px 0 15px; color: @text3; .size4(); }
+								ul{ float: left; width: 100%;
+									li{ float: left; width: 100%;										
+										a{ float: left; width: 100%; position: relative;
+											padding: 10px 0 10px 27px;
+											border-top: 1px solid @borderColor;
+											text-transform: capitalize; color: @text6; 
+											&:before{ content: "\f0da"; position: absolute; top: 10px; left: 5px;
+											font-family: "FontAwesome"; 
+											}
+											&:hover{
+												color: @activeColor;
+											}
+										}
+									}
+								}
+							}
+							.box3{ width: 170px; margin-left: 30px;
+								h2{ margin: -5px 0 15px; color: @text3; .size4(); }
+								ul{ float: left; width: 100%;
+									li{ float: left; width: 100%; margin-top: 10px; min-height: 72px;
+										&:first-child{ margin-top: 0; }
+										a{ float: left; width: 100%; position: relative;
+											border: 1px solid @borderColor; .transition();
+											img{ width: 100%; }
+											&:hover{ border-color: @activeColor; .transition(); }
+										}
+									}
+								}		
+							}
+						}
+						.explodedmenu-menu-popup{
+							position: absolute; top: 65px; left: 0; z-index: 991; .opacity(0); visibility: hidden; .transition();
+							&:before{ content: ""; width: 100%; height: 20px; top: -20px; left: 0; background: #f00;
+							position:  absolute; .opacity(0);
+							}
+							.inner-cms-block{
+								.shadow(); background: #fff; .border-radius(5px); padding: 25px 15px; 
+							}
+							.exploded-menu-block{ background: #fff;
+								ul{ .shadow(); min-width: 200px; padding: 15px 10px;
+									li{  position: relative; background: @bgf9;
+										a{
+											padding: 5px 0 5px 32px; display: block; position: relative; color: @text6;
+											&:before{ content: "\f105"; position: absolute; left: 20px; top: 5px; 
+											 font-family: "FontAwesome";
+											}
+											&:hover{ background: @activeColor; 
+												color: #fff;
+												&:before{ 
+													content: "\f105"; position: absolute; left: 20px; top: 5px; 
+											 		font-family: "FontAwesome";
+												}
+											}
+										}
+										ul{
+											position: absolute; top: 0; left: 230px; background: #fff;
+											.opacity(0); visibility: hidden; .transition(); z-index: 9;
+										}
+										&:hover{
+											> ul{
+												.opacity(100); visibility: visible; left: 180px;
+												.transition();
+											}
+										}
+									}
+								}							
+							}						
+						}
+						&:hover{
+							.explodedmenu-menu-popup{ top: 50px; .opacity(100); visibility: visible; .transition();}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}

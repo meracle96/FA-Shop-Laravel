@@ -1,0 +1,15 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project:	Canifa
+Version:	1.1
+Last change:	20/08/2015 [fixed Float bug, vf]
+Assigned to:	7up theme
+Primary use:	admin 
+-------------------------------------------------------------------*/
+@import "../bootstrap/css/bootstrap.min.css";
+@import "../bootstrap/css/bootstrap-theme.min.css";
+@import "font-awesome.min.css";
+@import "owl.carousel.css"; 
+@import "owl.transitions.css"; 
+@import "theme-default.css"; 
+@import "vt-responsive.css";
